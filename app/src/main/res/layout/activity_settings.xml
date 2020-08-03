@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white"
+            android:id="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:src="@drawable/leftarrow"
+                android:layout_gravity="start"
+                android:layout_marginRight="10dp"
+                android:id="@+id/back"/>
+
+            <TextView
+                android:id="@+id/titled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="start"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="0dp"
+                android:fontFamily="@font/muli_semibold"
+                android:textColor="@color/white"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_dark_background"
+        android:layout_marginTop="0dp">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_dark_background"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_dark_background"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
+                    android:id="@+id/removeads"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cie1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/removeads"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/cie1"
+                        android:padding="8dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/white"
+                            android:layout_centerVertical="true"
+                            android:text="Remove Ads"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C4C4C4"
+                            android:layout_marginStart="16dp"
+                            android:layout_alignParentRight="true"
+                            android:text="Enjoy 15mins Ad-Free Pro version"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/push"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cie3"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="20dp"
+                        android:src="@drawable/notification"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/cie3"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="Push Notifications"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/activate_push"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cie2"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="20dp"
+                        android:src="@drawable/feedbacks"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_toEndOf="@+id/cie2"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/white"
+                            android:layout_centerVertical="true"
+                            android:text="Feedback"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColor="#C4C4C4"
+                            android:layout_alignParentRight="true"
+                            android:text="Write mail to HDW developer team"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/share"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cie4"
+                        android:layout_width="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="18dp"
+                        android:src="@drawable/recommend"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/cie4"
+                        android:padding="8dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/white"
+                            android:layout_centerVertical="true"
+                            android:text="Recommend"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColor="#C4C4C4"
+                            android:layout_alignParentRight="true"
+                            android:text="Share this app to your friends/family"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/storage"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cie5"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="20dp"
+                        android:src="@drawable/storage"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_toEndOf="@+id/cie5"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/white"
+                            android:layout_centerVertical="true"
+                            android:text="Storage Location"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColor="#C4C4C4"
+                            android:layout_alignParentRight="true"
+                            android:text="/storage/emulated/0/Pictures/Amazing HD Wallpaper/"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_semibold"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:text="About"/>
+
+                <RelativeLayout
+                    android:id="@+id/rate"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cie7"
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="20dp"
+                        android:src="@drawable/rating"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/cie7"
+                        android:padding="8dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/white"
+                            android:layout_centerVertical="true"
+                            android:text="Rate this app"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColor="#C4C4C4"
+                            android:layout_alignParentRight="true"
+                            android:text="Rate us with 5-stars if you like this app"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/about"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cie8"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/android"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_toEndOf="@+id/cie8"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/white"
+                            android:layout_centerVertical="true"
+                            android:text="Version"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_alignParentRight="true"
+                            android:text="1.0.0"
+                            android:textColor="#C4C4C4"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

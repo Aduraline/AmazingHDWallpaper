@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">Amazing HD Wallpaper</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_drawer_recently_added">Recently Added</string>
+    <string name="toast_saved">Wallpaper saved to #</string>
+    <string name="toast_saved_failed">Sorry! Failed to save wallpaper</string>
+    <string name="toast_wallpaper_set">Wallpapaer updated!</string>
+    <string name="toast_wallpaper_set_failed">Sorry! Unable to set wallpapaer</string>
+    <string name="splash_error">Unable to download wallpapers. Ensure your device has internet connection!</string>
+    <string name="set_wallpaper">Set</string>
+    <string name="download_wallpaper">Download</string>
+    <string name="msg_unknown_error">Sorry! Unknown error occurred.</string>
+    <string name="msg_wall_fetch_error">Sorry! Unable to fetch wallpaper(s). Verify app settings or device doesn\'t have internet connection.</string>
+    <string name="lbl_btn_save">Save</string>
+
+    <string name="banner_ad_unit_id">BANNER_AD_UNIT_ID_FROM_GOOGLE_ADMOB</string>
+    <string name="api_id">APP_ID_FROM_GOOGLE_ADMOB</string>
+    <string name="ad_unit_id">REWARDED_AD_UNIT_ID_FROM_GOOGLE_ADMOB</string>
+    <string name="interstitial_ad_unit_id">INTERSTITIAL_AD_UNIT_ID_FROM_GOOGLE_ADMOB</string>
+
+</resources>

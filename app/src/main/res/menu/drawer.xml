@@ -1,0 +1,66 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Recent"
+        android:id="@+id/recent"
+        android:icon="@drawable/ic_posts"/>
+    <item android:title="Random"
+        android:id="@+id/random"
+        android:icon="@drawable/ic_popular"/>
+
+    <item android:title="Amazing HD Wallpaper">
+        <menu>
+            <item
+                android:id="@+id/abstrat"
+                android:title="3D Abstract" />
+            <item
+                android:id="@+id/aerial"
+                android:title="Aerial View" />
+            <item
+                android:id="@+id/animals"
+                android:title="Animals" />
+            <item
+                android:id="@+id/architecture"
+                android:title="Architecture" />
+            <item
+                android:id="@+id/automotive"
+                android:title="Automotive" />
+            <item
+                android:id="@+id/beach"
+                android:title="Beach" />
+            <item
+                android:id="@+id/celebrations"
+                android:title="Celebrations" />
+            <item
+                android:id="@+id/creative"
+                android:title="Creative" />
+            <item
+                android:id="@+id/cute"
+                android:title="Cute" />
+            <item
+                android:id="@+id/black"
+                android:title="Dark/Black" />
+            <item
+                android:id="@+id/fantasy"
+                android:title="Fantasy" />
+            <item
+                android:id="@+id/flowers"
+                android:title="Flowers" />
+            <item
+                android:id="@+id/musical"
+                android:title="Musical" />
+            <item
+                android:id="@+id/nature"
+                android:title="Nature" />
+            <item
+                android:id="@+id/technology"
+                android:title="Technology" />
+            <item
+                android:id="@+id/travel"
+                android:title="Travel" />
+        </menu>
+    </item>
+
+
+
+
+</menu>
