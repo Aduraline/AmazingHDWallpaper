@@ -6,48 +6,36 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.util.Log;
-import android.view.Display;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
-import amazing.hd.amazinghdwallpaper.app.AppConst;
 import amazing.hd.amazinghdwallpaper.dialog.CustomDialogClass;
 import amazing.hd.amazinghdwallpaper.picasa.model.Wallpaper;
 import amazing.hd.amazinghdwallpaper.util.Utils;
 
-
 public class FullScreenViewActivity extends Activity implements OnClickListener {
-	private static final String TAG = FullScreenViewActivity.class
-			.getSimpleName();
-	public static final String TAG_SEL_IMAGE = "data";
+	public static final String TAG_IMAGE = "data";
 	private Wallpaper selectedPhoto;
 	private ImageView fullImageView;
 	private LinearLayout llSetWallpaper, llDownloadWallpaper, llInfoWallpaper;
 	private Utils utils;
 	private ProgressBar pbLoader;
 	View mDecorView;
-	private InterstitialAd mInterstitialAd;
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,45 +48,12 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
 
 		setContentView(R.layout.activity_fullscreen_image);
 
-		mInterstitialAd = new InterstitialAd(this);
-		mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-
-		// Create an ad request.
-		AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
-
-		// Set an AdListener.
-		mInterstitialAd.setAdListener(new AdListener() {
-			@Override
-			public void onAdLoaded() {
-//				Toast.makeText(FullScreenViewActivity.this,
-//						"The interstitial is loaded", Toast.LENGTH_SHORT).show();
-			}
-
-			@Override
-			public void onAdClosed() {
-				// Proceed to the next level.
-				if (((BitmapDrawable) fullImageView.getDrawable()) != null){
-					Bitmap bitmap = ((BitmapDrawable) fullImageView.getDrawable())
-							.getBitmap();
-					utils.saveImageToSDCard(bitmap);
-				}else{
-					Toast.makeText(FullScreenViewActivity.this, "Wallpaper download failed", Toast.LENGTH_SHORT).show();
-				}
-			}
-		});
-
-		// Start loading the ad now so that it is ready by the time the user is ready to go to
-		// the next level.
-
-		if (AppConst.isAdsDisabled == false)
-			mInterstitialAd.loadAd(adRequestBuilder.build());
-
 		mDecorView = getWindow().getDecorView();
 
 		fullImageView = (ImageView) findViewById(R.id.imgFullscreen);
-		llSetWallpaper = (LinearLayout) findViewById(R.id.llSetWallpaper);
-		llInfoWallpaper = (LinearLayout) findViewById(R.id.llInfoWallpaper);
-		llDownloadWallpaper = (LinearLayout) findViewById(R.id.llDownloadWallpaper);
+		llSetWallpaper = (LinearLayout) findViewById(R.id.setWallpaper);
+		llInfoWallpaper = (LinearLayout) findViewById(R.id.wallpaperInfo);
+		llDownloadWallpaper = (LinearLayout) findViewById(R.id.downloadWallpaper);
 		pbLoader = (ProgressBar) findViewById(R.id.pbLoader);
 
 		// hide the action bar in fullscreen mode
@@ -122,7 +77,7 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
 
 		Intent i = getIntent();
 		if (i!=null) {
-			selectedPhoto = (Wallpaper) i.getSerializableExtra(TAG_SEL_IMAGE);
+			selectedPhoto = (Wallpaper) i.getSerializableExtra(TAG_IMAGE);
 		}
 
 		if (selectedPhoto != null) {
@@ -187,6 +142,7 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
 	 * View click listener
 	 * */
 
+	@SuppressLint("NonConstantResourceId")
 	@Override
 	public void onClick(View v) {
 		if (((BitmapDrawable) fullImageView.getDrawable()) != null){
@@ -194,9 +150,8 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
 					.getBitmap();
 			switch (v.getId()) {
 				// button Download Wallpaper tapped
-				case R.id.llDownloadWallpaper:
-					if (mInterstitialAd.isLoaded()) {
-						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+				case R.id.downloadWallpaper:
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 							if (ContextCompat.checkSelfPermission(getApplicationContext(),
 									Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
 									&& ContextCompat.checkSelfPermission(getApplicationContext(),
@@ -210,46 +165,33 @@ public class FullScreenViewActivity extends Activity implements OnClickListener 
 								}, 0);
 
 							} else {
-								mInterstitialAd.show();
+								// Proceed to the next level.
+								if (((BitmapDrawable) fullImageView.getDrawable()) != null){
+									utils.saveImageToSDCard(bitmap);
+								}else{
+									Toast.makeText(FullScreenViewActivity.this, "Wallpaper download failed", Toast.LENGTH_SHORT).show();
+								}
 							}
 						}else{
-							mInterstitialAd.show();
-						}
-					} else {
-						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-							if (ContextCompat.checkSelfPermission(getApplicationContext(),
-									Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-									&& ContextCompat.checkSelfPermission(getApplicationContext(),
-									Manifest.permission.READ_EXTERNAL_STORAGE)
-									!= PackageManager.PERMISSION_GRANTED) {
-								requestPermissions(new String[]{
-										Manifest.permission.READ_EXTERNAL_STORAGE,
-										Manifest.permission.WRITE_EXTERNAL_STORAGE
-
-
-								}, 0);
-
-							} else {
+							// Proceed to the next level.
+							if (((BitmapDrawable) fullImageView.getDrawable()) != null){
 								utils.saveImageToSDCard(bitmap);
+							}else{
+								Toast.makeText(FullScreenViewActivity.this, "Wallpaper download failed", Toast.LENGTH_SHORT).show();
 							}
-						}else {
-							utils.saveImageToSDCard(bitmap);
 						}
-					}
 					break;
-				// button Set As Wallpaper tapped
-				case R.id.llSetWallpaper:
+				case R.id.setWallpaper:
 					utils.setAsWallpaper(bitmap);
 					break;
-				case R.id.	llInfoWallpaper:
+				case R.id.	wallpaperInfo:
 					CustomDialogClass cdd=new CustomDialogClass(this);
 					cdd.show();
 				default:
 					break;
 			}
-		}else{
-//			Toast.makeText(FullScreenViewActivity.this, "Wallpaper download failed", Toast.LENGTH_SHORT).show();
 		}
+
 
 	}
 

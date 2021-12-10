@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -13,7 +14,7 @@
         style="?android:attr/progressBarStyle">
     </ProgressBar>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/grid_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -21,7 +22,7 @@
         android:gravity="center"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth">
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -30,12 +31,14 @@
         android:orientation="vertical"
         android:visibility="visible"
         android:layout_centerInParent="true"
-        android:id="@+id/nonetwork">
+        android:id="@+id/nonetwork"
+        tools:ignore="UseCompoundDrawables">
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/placeholder"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            tools:ignore="ContentDescription" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,18 +48,8 @@
             android:fontFamily="@font/muli_semibold"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:text="No Internet connection"/>
+            android:text="@string/no_internet_connection"/>
 
     </LinearLayout>
-
-    <com.google.android.gms.ads.NativeExpressAdView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
-    </com.google.android.gms.ads.NativeExpressAdView>
 
 </RelativeLayout>

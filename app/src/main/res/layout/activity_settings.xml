@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_dark_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="0dp"
         app:elevation="0dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
             android:background="@color/colorPrimary"
@@ -27,14 +27,14 @@
                 android:src="@drawable/leftarrow"
                 android:layout_gravity="start"
                 android:layout_marginRight="10dp"
-                android:id="@+id/back"/>
+                android:id="@+id/back"
+                tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/titled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Settings"
-                android:textSize="20dp"
+                android:text="@string/settings"
+                android:textSize="20sp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="start"
                 android:paddingLeft="10dp"
@@ -42,17 +42,17 @@
                 android:fontFamily="@font/muli_semibold"
                 android:textColor="@color/white"/>
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/cardview_dark_background"
         android:layout_marginTop="0dp">
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/cardview_dark_background"
@@ -65,51 +65,7 @@
                 android:padding="12dp">
 
                 <RelativeLayout
-                    android:id="@+id/removeads"
                     android:layout_marginTop="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/cie1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/removeads"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_toEndOf="@+id/cie1"
-                        android:padding="8dp"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="16dp"
-                            android:textColor="@color/white"
-                            android:layout_centerVertical="true"
-                            android:text="Remove Ads"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#C4C4C4"
-                            android:layout_marginStart="16dp"
-                            android:layout_alignParentRight="true"
-                            android:text="Enjoy 15mins Ad-Free Pro version"
-                            android:textSize="12sp"
-                            android:layout_centerVertical="true"/>
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:id="@+id/push"
                     android:layout_width="match_parent"
@@ -121,7 +77,8 @@
                         android:layout_width="20dp"
                         android:layout_centerVertical="true"
                         android:layout_height="20dp"
-                        android:src="@drawable/notification"/>
+                        android:src="@drawable/notification"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -131,15 +88,17 @@
                         android:layout_toEndOf="@+id/cie3"
                         android:textColor="@color/white"
                         android:layout_centerVertical="true"
-                        android:text="Push Notifications"
-                        android:textSize="16sp" />
+                        android:text="@string/push_notifications"
+                        android:textSize="16sp"
+                        tools:ignore="RelativeOverlap" />
 
                     <Switch
                         android:id="@+id/activate_push"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                        android:layout_centerVertical="true"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
                 </RelativeLayout>
 
@@ -156,7 +115,8 @@
                         android:layout_width="20dp"
                         android:layout_centerVertical="true"
                         android:layout_height="20dp"
-                        android:src="@drawable/feedbacks"/>
+                        android:src="@drawable/feedbacks"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -170,8 +130,7 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="16dp"
                             android:textColor="@color/white"
-                            android:layout_centerVertical="true"
-                            android:text="Feedback"
+                            android:text="@string/feedback"
                             android:textSize="16sp" />
 
                         <TextView
@@ -179,12 +138,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:textColor="#C4C4C4"
-                            android:layout_alignParentRight="true"
-                            android:text="Write mail to HDW developer team"
-                            android:textSize="12sp"
-                            android:layout_centerVertical="true"/>
+                            android:text="@string/write_mail"
+                            android:textSize="12sp" />
                     </LinearLayout>
-
 
                 </RelativeLayout>
 
@@ -201,7 +157,8 @@
                         android:layout_width="18dp"
                         android:layout_centerVertical="true"
                         android:layout_height="18dp"
-                        android:src="@drawable/recommend"/>
+                        android:src="@drawable/recommend"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -215,8 +172,7 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="16dp"
                             android:textColor="@color/white"
-                            android:layout_centerVertical="true"
-                            android:text="Recommend"
+                            android:text="@string/recommend"
                             android:textSize="16sp" />
 
                         <TextView
@@ -224,10 +180,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:textColor="#C4C4C4"
-                            android:layout_alignParentRight="true"
-                            android:text="Share this app to your friends/family"
-                            android:textSize="12sp"
-                            android:layout_centerVertical="true"/>
+                            android:text="@string/share_app"
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -245,7 +199,8 @@
                         android:layout_width="20dp"
                         android:layout_centerVertical="true"
                         android:layout_height="20dp"
-                        android:src="@drawable/storage"/>
+                        android:src="@drawable/storage"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -259,8 +214,7 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="16dp"
                             android:textColor="@color/white"
-                            android:layout_centerVertical="true"
-                            android:text="Storage Location"
+                            android:text="@string/storage_location"
                             android:textSize="16sp" />
 
                         <TextView
@@ -268,12 +222,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:textColor="#C4C4C4"
-                            android:layout_alignParentRight="true"
-                            android:text="/storage/emulated/0/Pictures/Amazing HD Wallpaper/"
-                            android:textSize="12sp"
-                            android:layout_centerVertical="true"/>
+                            android:text="@string/storage_location_path"
+                            android:textSize="12sp" />
                     </LinearLayout>
-
                 </RelativeLayout>
 
                 <TextView
@@ -282,7 +233,7 @@
                     android:fontFamily="@font/muli_semibold"
                     android:layout_marginTop="15dp"
                     android:textColor="@color/white"
-                    android:text="About"/>
+                    android:text="@string/about"/>
 
                 <RelativeLayout
                     android:id="@+id/rate"
@@ -297,7 +248,8 @@
                         android:layout_width="20dp"
                         android:layout_centerVertical="true"
                         android:layout_height="20dp"
-                        android:src="@drawable/rating"/>
+                        android:src="@drawable/rating"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -311,8 +263,7 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="16dp"
                             android:textColor="@color/white"
-                            android:layout_centerVertical="true"
-                            android:text="Rate this app"
+                            android:text="@string/rate_this_app"
                             android:textSize="16sp" />
 
                         <TextView
@@ -320,10 +271,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:textColor="#C4C4C4"
-                            android:layout_alignParentRight="true"
-                            android:text="Rate us with 5-stars if you like this app"
-                            android:textSize="12sp"
-                            android:layout_centerVertical="true"/>
+                            android:text="@string/rate_subtxt"
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -341,7 +290,8 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/android"/>
+                        android:src="@drawable/android"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -355,27 +305,23 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="16dp"
                             android:textColor="@color/white"
-                            android:layout_centerVertical="true"
-                            android:text="Version"
+                            android:text="@string/version"
                             android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_alignParentRight="true"
-                            android:text="1.0.0"
+                            android:text="@string/app_version"
                             android:textColor="#C4C4C4"
-                            android:textSize="12sp"
-                            android:layout_centerVertical="true"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                 </RelativeLayout>
 
-
             </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

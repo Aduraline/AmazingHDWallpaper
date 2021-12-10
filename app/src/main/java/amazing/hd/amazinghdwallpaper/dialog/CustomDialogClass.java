@@ -13,12 +13,10 @@ public class CustomDialogClass extends Dialog implements
         View.OnClickListener {
 
     public Activity c;
-    public Dialog d;
     public Button no;
 
     public CustomDialogClass(Activity a) {
         super(a);
-        // TODO Auto-generated constructor stub
         this.c = a;
     }
 
@@ -34,12 +32,8 @@ public class CustomDialogClass extends Dialog implements
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.cancelnow:
-                dismiss();
-                break;
-            default:
-                break;
+        if (v.getId() == R.id.cancelnow) {
+            dismiss();
         }
         dismiss();
     }

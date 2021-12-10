@@ -2,8 +2,6 @@ package amazing.hd.amazinghdwallpaper.util;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Random;
 
 import android.app.WallpaperManager;
@@ -16,29 +14,11 @@ import android.widget.Toast;
 import amazing.hd.amazinghdwallpaper.R;
 
 public class Utils {
-	private String TAG = Utils.class.getSimpleName();
-	private Context _context;
+	private final String TAG = Utils.class.getSimpleName();
+	private final Context _context;
 
-	// constructor
 	public Utils(Context context) {
 		this._context = context;
-	}
-
-	public static void CopyStream(InputStream is, OutputStream os)
-	{
-		final int buffer_size=1024;
-		try
-		{
-			byte[] bytes=new byte[buffer_size];
-			for(;;)
-			{
-				int count=is.read(bytes, 0, buffer_size);
-				if(count==-1)
-					break;
-				os.write(bytes, 0, count);
-			}
-		}
-		catch(Exception ex){}
 	}
 
 	public void saveImageToSDCard(Bitmap bitmap) {

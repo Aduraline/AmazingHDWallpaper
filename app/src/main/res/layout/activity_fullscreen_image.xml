@@ -34,7 +34,7 @@
     <!-- Add as favourite button -->
 
     <LinearLayout
-        android:id="@+id/llInfoWallpaper"
+        android:id="@+id/wallpaperInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -55,7 +55,7 @@
     <!-- Set as wallpaper button -->
 
     <LinearLayout
-        android:id="@+id/llDownloadWallpaper"
+        android:id="@+id/downloadWallpaper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -76,7 +76,7 @@
     <!-- Download wallpaper button -->
 
     <LinearLayout
-        android:id="@+id/llSetWallpaper"
+        android:id="@+id/setWallpaper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

@@ -1,0 +1,99 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="amazing.hd.amazinghdwallpaper"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:6:5-79
+11-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:6:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:7:5-67
+12-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:7:22-64
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:8:5-9:40
+13-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:8:22-78
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:10:5-80
+14-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:10:22-77
+15    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+15-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:11:5-72
+15-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:11:22-69
+16
+17    <application
+17-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:13:5-37:19
+18        android:allowBackup="true"
+18-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:14:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.7.0] /Users/thattechguy/.gradle/caches/transforms-3/21249a56641fb0309777a5ae16ce99ff/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:fullBackupOnly="true"
+21-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:15:9-38
+22        android:icon="@drawable/ic_launcher"
+22-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:16:9-45
+23        android:label="@string/app_name"
+23-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:19:9-41
+24        android:roundIcon="@drawable/ic_launcher"
+24-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:17:9-50
+25        android:supportsRtl="true"
+25-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:18:9-35
+26        android:testOnly="true"
+27        android:theme="@style/AppThemeNo" >
+27-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:20:9-42
+28        <activity
+28-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:22:9-29:20
+29            android:name="amazing.hd.amazinghdwallpaper.SplashActivity"
+29-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:22:19-49
+30            android:exported="true" >
+30-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:23:13-36
+31            <intent-filter>
+31-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:24:13-28:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:25:17-69
+32-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:25:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:27:17-77
+34-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:27:27-74
+35            </intent-filter>
+36        </activity>
+37        <activity android:name="amazing.hd.amazinghdwallpaper.MainActivity" />
+37-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:31:9-49
+37-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:31:19-47
+38        <activity android:name="amazing.hd.amazinghdwallpaper.SettingsActivity" />
+38-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:33:9-53
+38-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:33:19-51
+39        <activity android:name="amazing.hd.amazinghdwallpaper.FullScreenViewActivity" />
+39-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:35:9-59
+39-->/Users/thattechguy/Desktop/Client Work/Projects/Active/AmazingWallpaperHD/AmazingHDWallpaper/app/src/main/AndroidManifest.xml:35:19-57
+40
+41        <provider
+41-->[androidx.emoji2:emoji2:1.0.0] /Users/thattechguy/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+42            android:name="androidx.startup.InitializationProvider"
+42-->[androidx.emoji2:emoji2:1.0.0] /Users/thattechguy/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+43            android:authorities="amazing.hd.amazinghdwallpaper.androidx-startup"
+43-->[androidx.emoji2:emoji2:1.0.0] /Users/thattechguy/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+44            android:exported="false" >
+44-->[androidx.emoji2:emoji2:1.0.0] /Users/thattechguy/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+45            <meta-data
+45-->[androidx.emoji2:emoji2:1.0.0] /Users/thattechguy/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+46                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+46-->[androidx.emoji2:emoji2:1.0.0] /Users/thattechguy/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+47                android:value="androidx.startup" />
+47-->[androidx.emoji2:emoji2:1.0.0] /Users/thattechguy/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+48            <meta-data
+48-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/thattechguy/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+49                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+49-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/thattechguy/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+50                android:value="androidx.startup" />
+50-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/thattechguy/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+51        </provider>
+52    </application>
+53
+54</manifest>

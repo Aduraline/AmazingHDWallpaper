@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Amazing HD Wallpaper.iml" filepath="$PROJECT_DIR$/Amazing HD Wallpaper.iml" group="Amazing HD Wallpaper" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Amazing HD Wallpaper/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Amazing_HD_Wallpaper.iml" filepath="$PROJECT_DIR$/.idea/modules/Amazing_HD_Wallpaper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Amazing_HD_Wallpaper.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Amazing_HD_Wallpaper.app.iml" />
     </modules>
   </component>
 </project>
